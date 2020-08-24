@@ -65,3 +65,10 @@ g <- ggplot() +
 g
 ```
 
+```{bash}
+git pull
+git add .
+git commit -m 'daily updates'
+git push
+```
+
