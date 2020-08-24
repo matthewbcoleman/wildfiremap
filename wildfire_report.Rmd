@@ -17,7 +17,6 @@ library(sf)
 library(tidyverse)
 library(USAboundaries)
 library(ggthemes)
-
 ```
 
 
@@ -66,9 +65,9 @@ g
 ```
 
 ```{bash}
-git pull
-git add .
-git commit -m 'daily updates'
-git push
+#git pull
+#git add .
+#git commit -m 'daily updates'
+#git push
 ```
 
