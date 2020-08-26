@@ -79,20 +79,16 @@ fire_counts <- point_in_polygon(ca_fires, counties_ca, 'countyfp')
 
 g <- ggplot() +
   geom_sf(data = california) +
-  geom_sf(data = ca_fires, col = 'red4', alpha = .5, size = .5) +
-  geom_sf(data = fire_counts, aes(fill = log(n)), alpha = .9, size = .2) +
-  scale_fill_gradient(low = "white", high = "yellow") +
-  theme(legend.position = NULL) +
+  geom_sf(data = fire_counts, aes(fill = n), alpha = .9) +
+  geom_sf(data = ca_fires, col = 'orange', alpha = .5, size = .5) +
+  scale_fill_gradient(low = "white", high = "red4") +
+  theme(legend.title = 'Fire Pixel Count') +
   theme_linedraw() +
   labs(x = 'Longitude',
        y = 'Latitude', 
-       title = paste0('Location of Fires in California on ', format(Sys.Date(), format = '%b %d, %Y') ) ) 
-#g
+       title = paste0('Location of Fires in California on ', format(Sys.Date(), format = '%b %d, %Y') ) )
 
-#ifelse({st_distance(ca_fires$geometry,ca_fires$geometry)%>% drop_units() %>% .[1]}  <= 800, st_join(ca_fires$geometry,ca_fires$geometry),ca_fires$geometry)  
-#st_distance(ca_fires$geometry[4],ca_fires$geometry[5]) %>% drop_units() %>% .[1] <593
-
-ggplotly(g, tooltip = 'text')
+ggplotly(g)
 ```
 
 
