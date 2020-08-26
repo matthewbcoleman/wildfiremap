@@ -10,6 +10,7 @@ output:
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message=FALSE)
+setwd('/Users/matthewcoleman/Documents/GitHub/wildfiremap')
 ```
 
 
@@ -27,13 +28,14 @@ library(plotly)
 
 ```{r}
 #Download file, unzip, and read in fire data
-temp <- tempfile()
-url <- 'https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2/shapes/zips/SUOMI_VIIRS_C2_Global_24h.zip'
-download.file(url,temp)
-unzip(temp, exdir = 'data')
-data <- read_sf('data/SUOMI_VIIRS_C2_Global_24h.shp', crs = 4326) %>% st_transform(5070)
-unlink(temp)
-
+# temp <- tempfile()
+# url <- 'https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2/shapes/zips/SUOMI_VIIRS_C2_Global_24h.zip'
+# download.file(url,temp)
+# unzip(temp, exdir = 'data')
+# data <- read_sf('data/SUOMI_VIIRS_C2_Global_24h.shp', crs = 4326) %>% st_transform(5070)
+# unlink(temp)
+x<- 1
+#data <- read_sf('/Users/matthewcoleman/Documents/GitHub/wildfiremap/data/SUOMI_VIIRS_C2_Global_24h.shp', crs = 4326) %>% st_transform(5070)
 ```
 
 
