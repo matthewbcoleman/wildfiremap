@@ -13,9 +13,7 @@ url <- 'https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2
 print('no error here 2')
 download.file(url,temp)
 print('no error here 3')
-unzip(temp, 
-      exdir = '/Users/matthewcoleman/Documents/GitHub/wildfiremap/data',
-      overwrite = TRUE)
+unzip(temp, exdir = '/Users/matthewcoleman/Documents/GitHub/wildfiremap/data')
 print('no error here 4')
 unlink(temp)
 print('no error here 5')
