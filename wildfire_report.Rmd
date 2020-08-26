@@ -59,9 +59,8 @@ ca_fires <- ca_fires %>% mutate(county = counties_ca$name[unlist(county_indices)
 
 ```
 
-<center>
 
-```{r, out.width="1000px", out.height="750px"}
+```{r, out.width="1000px", out.height="1000px"}
 
 #Plot Map
 
@@ -80,7 +79,6 @@ g <- ggplot() +
 ggplotly(g, tooltip = 'text')
 ```
 
-</center>
 
 ```{r}
 fire_counts <- ca_fires %>% 
