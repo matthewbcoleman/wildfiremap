@@ -85,7 +85,7 @@ g <- ggplot() +
   theme_linedraw() +
   labs(x = 'Longitude',
        y = 'Latitude', 
-       title = paste0('Location of Fires in California on ', format(Sys.Date(), format = '%b %d, %Y')) )
+       title = paste0('Location of Fires in California on bleh bleh ', format(Sys.Date(), format = '%b %d, %Y')) )
 
 ggplotly(g)
 ```
