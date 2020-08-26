@@ -61,7 +61,7 @@ ca_fires <- ca_fires %>% mutate(county = counties_ca$name[unlist(county_indices)
 
 <center>
 
-```{r}
+```{r, out.width="1000px", out.height="750px"}
 
 #Plot Map
 
