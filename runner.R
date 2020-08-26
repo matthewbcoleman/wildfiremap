@@ -8,12 +8,12 @@ setwd('/Users/matthewcoleman/Documents/GitHub/wildfiremap')
 
 #Download file, unzip, and read in fire data
 #temp <- tempfile()
-url <- 'https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2/shapes/zips/SUOMI_VIIRS_C2_Global_24h.zip'
-print('error 1')
-download.file(url,'/Users/matthewcoleman/Documents/GitHub/wildfiremap/data/data.zip')
-print('error 2')
-unzip('/Users/matthewcoleman/Documents/GitHub/wildfiremap/data/data.zip', exdir = '/Users/matthewcoleman/Documents/GitHub/wildfiremap/data/')
-print('error 3')
+# url <- 'https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2/shapes/zips/SUOMI_VIIRS_C2_Global_24h.zip'
+# print('error 1')
+# download.file(url,'/Users/matthewcoleman/Documents/GitHub/wildfiremap/data/data.zip')
+# print('error 2')
+# unzip('/Users/matthewcoleman/Documents/GitHub/wildfiremap/data/data.zip', exdir = '/Users/matthewcoleman/Documents/GitHub/wildfiremap/data')
+# print('error 3')
 # #unlink(temp)
 
 
