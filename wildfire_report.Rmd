@@ -59,6 +59,8 @@ ca_fires <- ca_fires %>% mutate(county = counties_ca$name[unlist(county_indices)
 
 ```
 
+<center>
+
 ```{r, out.width="1300px", out.height="750px"}
 
 #Plot Map
@@ -70,13 +72,15 @@ g <- ggplot() +
   labs(x = 'Longitude',
        y = 'Latitude', 
        title = paste0('Location of Fires in California on ', format(Sys.Date(), format = '%b %d, %Y') ) ) 
-g
+#g
 
 #ifelse({st_distance(ca_fires$geometry,ca_fires$geometry)%>% drop_units() %>% .[1]}  <= 800, st_join(ca_fires$geometry,ca_fires$geometry),ca_fires$geometry)  
 #st_distance(ca_fires$geometry[4],ca_fires$geometry[5]) %>% drop_units() %>% .[1] <593
 
 ggplotly(g, tooltip = 'text')
 ```
+
+</center>
 
 ```{r}
 fire_counts <- ca_fires %>% 
@@ -90,7 +94,7 @@ fire_counts <- ca_fires %>%
 
 
 
-```{bash}
+```{bash message=FALSE, include=FALSE}
 git pull
 git add .
 git commit -m 'daily updates'

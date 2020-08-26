@@ -4,5 +4,5 @@ library(shiny)
 library(shinyFiles)
 library(rmarkdown)
 
-render('/Users/matthewcoleman/Documents/GitHub/wildfiremap/docs/wildfire_report.Rmd')
+render('/Users/matthewcoleman/Documents/GitHub/wildfiremap/wildfire_report.Rmd')
 
