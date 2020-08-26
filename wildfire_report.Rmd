@@ -44,7 +44,7 @@ unlink(temp)
 counties_raw <- USAboundaries::us_counties(resolution = 'low') %>%  
   st_transform(crs = 4326) %>% st_transform(5070)
 
-counties_ca <- counties_raw %>% filter(state_name == 'California')
+counties_ca <- counties_raw %>% filter(state_name == 'California') #%>% st_combine() 
 
 california <- counties_ca %>% st_combine() 
 
@@ -80,13 +80,12 @@ fire_counts <- point_in_polygon(ca_fires, counties_ca, 'countyfp')
 g <- ggplot() +
   geom_sf(data = california) +
   geom_sf(data = fire_counts, aes(fill = n), alpha = .9) +
-  geom_sf(data = ca_fires, col = 'orange', alpha = .5, size = .5) +
-  scale_fill_gradient(low = "white", high = "red4") +
-  theme(legend.title = 'Fire Pixel Count') +
+  geom_sf(data = ca_fires, col = 'red4', alpha = .5, size = .5) +
+  scale_fill_gradient(low = "white", high = "orange", name ='Fire Pixel \n Count' ) +
   theme_linedraw() +
   labs(x = 'Longitude',
        y = 'Latitude', 
-       title = paste0('Location of Fires in California on ', format(Sys.Date(), format = '%b %d, %Y') ) )
+       title = paste0('Location of Fires in California on ', format(Sys.Date(), format = '%b %d, %Y')) )
 
 ggplotly(g)
 ```
